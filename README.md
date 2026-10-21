@@ -65,7 +65,7 @@ Each case is the skill at a different stage — what it could do, and what it st
 
 Specs, per-cut tables and self-checks live inside each folder.
 
-Track credits: 《意外》 — 薛之谦 (words and music 杨子朴) ｜ 《骄傲的少年》 — 南征北战NZBZ (words 赵辰龙, music 汀洋) ｜ 《推开世界的门》 — 杨乃文 (words and music 火星电台 / 黄少峰) ｜ 《快乐小神仙》 — 天唱组合 (words 张藜, music 肖白). All rights stay with their owners; these four cases are technical write-ups only.
+Track credits: 《意外》 — 薛之谦 (words and music 杨子朴) ｜ 《骄傲的少年》 — 南征北战NZBZ (words 赵辰龙, music 汀洋) ｜ 《推开世界的门》 — 杨乃文 (words and music 火星电台 / 黄少峰) ｜ 《快乐小神仙》 — 天唱组合 (words 张藜, music 肖白). All rights stay with their owners; these four cases are technical write-ups only. Footage is referred to by alias (`S01`…); original file names are not published.
 
 ---
 
