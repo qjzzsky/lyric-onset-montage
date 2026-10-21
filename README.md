@@ -22,7 +22,7 @@ How deep the survey goes scales with the library: a handful of short clips get a
 
 Once the footage is sorted, a lyric line can be broken into several shots. The four cuts above are what sits under 「转眼间 / 一切都已改变 / 新的起点」, in film order: steps beside a ramp → the ramp now carrying handrails → the driver pulling the blue ramp out → off the train.
 
-Concretely, in the example above, the handrail that appears in the second frame is the plainest evidence of 「一切都已改变」 — not change in the abstract, but something you can hold on to.
+Concretely, in the example above, the handrail that appears in the second frame is the plainest image of 「一切都已改变」 — not change in the abstract, but something you can hold on to.
 
 「新的起点」 spans the last two cuts: shot 15 is one continuous take, from the car door and the driver bending to pull the ramp out to the ramp flat on the ground; shot 16 cuts to the platform. That is why every line gets 3–4 first choices plus 3–6 alternates, with the reason for each, and a cut only after you nod.
 
@@ -102,13 +102,12 @@ Everything the agent needs is inside `skills/lyric-onset-montage/` — `SKILL.md
 | **Network** | untested | untested | The author's environment has always been online; running fully offline has not been verified. The skill itself never fetches anything |
 | **Downloader** | not needed | not needed | This skill ships no downloader of any kind |
 
-**Tested on** (author's own runs — every cell below produced a finished edit):
+**Tested on** (author's own runs — each row below produced a finished edit):
 
 | Host | Model | Result |
 | --- | --- | --- |
 | Hermes Agent (Nous Research) | Xiaomi MiMo V2.6 | ✅ |
 | Hermes Agent | DeepSeek V4.1 | ✅ |
-| DeepSeek Harness (DSH) | Xiaomi MiMo V2.6 | ✅ |
 | DeepSeek Harness (DSH) | DeepSeek V4.1 | ✅ |
 
 Model tiers inside a series differ by size and cost; the skill runs on either. Pick the tier by the job, not by the README.

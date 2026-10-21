@@ -94,7 +94,7 @@ def render_tuimen():
     T0,T1=12.6,31.9
     cuts=[13.30,16.60,20.15,23.35,27.15,30.70]
     img,d=frame("字头对齐 vs 鼓点对齐",
-      "《推开世界的门》55s 版 6 个歌词刀：切点贴在「人耳听到的落点」，比检测器报的持续段上升沿晚中位 245ms ｜ 若把刀改贴最近网格线，中位差 214ms",
+      "《推开世界的门》55s 版（全片 16 刀／本窗口 6 刀）：切点贴人耳落点，比检测器上升沿晚中位 245ms ｜ 改贴最近网格线则中位差 214ms",
       "音源 成片音轨 55.00s（演唱 杨乃文｜词曲 火星电台 / 黄少峰） ｜ 窗口 12.6–31.9s ｜ 曲速 70.0 BPM（格距 0.857s，相位集中度 0.60）｜ 网格＝低频拟合，非人工标拍")
     AU,AD=178,438; BU,BD=462,722
     wave_panel(d,AU,AD,e,tt,T0,T1); grid_lines(d,PH,P,T0,T1,AU,AD)
@@ -113,7 +113,7 @@ def render_tuimen():
       "典型一处：「捧着一颗」旧切点 13.05s、检测持续段上升沿 13.05s —— 包络说「刚好」，耳朵说「早了」，后移 250ms 到 13.30s",
       "鼓点网格","人耳切点",
       "为什么 beat 检测测不到：它只给等间隔网格，不知道哪一下开始一句；人耳听的是元音唱出来的落点，比能量抬头晚 0.15–0.25s。",
-      "数据：《推开世界的门》镜头表 + 逐刀字头表（10 刀实测）｜ 网格 check_cut.py fit_grid ｜ 2026-10-21")
+      "数据：《推开世界的门》镜头表 + 逐刀字头表（10 刀实测）｜ 网格 check_cut.py fit_grid")
     out=str(pathlib.Path(__file__).resolve().parents[1]/"推开世界的门-55s"/"cut-proof.png")
     img.save(out,quality=95); print("saved",out,os.path.getsize(out)//1024,"KB")
 
@@ -150,10 +150,10 @@ def render_kuaile():
     lab=rot_text("到宇宙里游一游",F(15),"#ff7b72")
     img.paste(lab,(int(vx(r["onset"],T0,T1))+3,int(BD-6-lab.height)),lab)
     finish(img,d,
-      "同一个道理：字幕定「这句大概在哪」，字头靠音轨自己量 —— 字幕的 240ms 偏移没被带进成片；47 刀交付后用户回「不用挪」",
+      "同一个道理：字幕定「这句大概在哪」，字头靠音轨自己量 —— 字幕的 240ms 偏移没被带进成片；47 刀交付后没有要求挪动任何一刀",
       "鼓点网格","实测字头",
       "为什么不能拿字幕当切点：烧录字幕普遍比唱早 0.17–0.27s，照抄就是整片系统性提前；字幕的价值是「句界」，不是「时刻」。",
-      "数据：《快乐小神仙》自检报告 + onsets.json（36 句）｜ 网格 check_cut.py fit_grid（110.9 BPM）｜ 2026-10-21")
+      "数据：《快乐小神仙》自检报告 + onsets.json（37 段字幕并成 36 句）｜ 网格 check_cut.py fit_grid（110.9 BPM）")
     out=str(pathlib.Path(__file__).resolve().parents[1]/"快乐小神仙-176s"/"cut-proof.png")
     img.save(out,quality=95); print("saved",out,os.path.getsize(out)//1024,"KB")
 

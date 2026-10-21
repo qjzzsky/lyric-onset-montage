@@ -19,7 +19,7 @@ RED, ORANGE = (255, 80, 80), (255, 200, 90)
 
 PANELS = [
     ("骄傲的少年-115s/cut-proof.png", "① 双轨刀口图", "cut timing",
-     "浅蓝＝波形，灰竖线＝节拍网格，红线＝实测字头（也就是切点）。",
+     "浅蓝＝波形，灰竖线＝节拍网格，红线＝切点（按实测字头落刀）。",
      "答：整片的切点是不是都落在字头上。交付前体检；解释 A/B 两个数。",
      "The cut is on the word: waveform, beat grid, measured onsets — checked before delivery."),
     ("骄傲的少年-115s/分镜首帧.jpg", "② 首帧拼图", "shot choice",
