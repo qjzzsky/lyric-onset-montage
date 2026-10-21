@@ -4,6 +4,22 @@
 
 A skill for AI agents that turns a song plus a folder of raw footage into a montage whose every cut lands on the first consonant of a lyric line. It measures the onset from the audio, keeps shot selection and timing as two separate decisions, and hands back evidence you can check instead of adjectives you have to trust.
 
+## Install
+
+```bash
+npx skills add qjzzsky/lyric-onset-montage
+```
+
+That is the path tested on this repo: skills.sh clones it, finds one skill and installs `lyric-onset-montage` for the agents it detects (Claude Code, Codex, Cursor, Amp, Cline and others).
+
+With the GitHub CLI, name the agent you want:
+
+```bash
+gh skill install qjzzsky/lyric-onset-montage lyric-onset-montage --agent codex
+```
+
+Hermes is not in that agent list — copy the folder instead: take `skills/lyric-onset-montage/` from the repo and put it in your local skills directory, then `hermes skills list` should show `lyric-onset-montage`.
+
 ---
 
 ## Read the footage before you label it

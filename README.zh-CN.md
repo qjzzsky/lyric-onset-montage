@@ -4,6 +4,22 @@
 
 给 AI agent 用的技能：一首歌加一个素材目录，剪成一版每一刀都落在歌词首字上的混剪。字头从音频里量，选画面和定切点分开判，交付的时候给的是可以自己核对的图和数据，不是一句「看着挺贴」。
 
+## 安装
+
+```bash
+npx skills add qjzzsky/lyric-onset-montage
+```
+
+这条路在本仓库实测过：skills.sh 克隆仓库、认出 1 个技能，按它检测到的 agent（Claude Code / Codex / Cursor / Amp / Cline 等）装好 `lyric-onset-montage`。
+
+用 GitHub CLI 的话，要指明装给哪个 agent：
+
+```bash
+gh skill install qjzzsky/lyric-onset-montage lyric-onset-montage --agent codex
+```
+
+Hermes 不在上面那份 agent 名单里，改用复制目录：把仓库里的 `skills/lyric-onset-montage/` 整个拷到本机技能目录，再 `hermes skills list` 看有没有 `lyric-onset-montage`。
+
 ---
 
 ## 素材先看懂，再分类
