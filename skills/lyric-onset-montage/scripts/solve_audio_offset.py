@@ -12,7 +12,7 @@
 用法：
   python solve_audio_offset.py 原曲.mp3 成片.mp4
   python solve_audio_offset.py 原曲.m4a 成片.mp4 --template 90 \
-      --ffmpeg D:/Tools/VideoConverter/ffmpeg.exe
+      --ffmpeg /path/to/ffmpeg
 
 判读：
   · 相关度 > 0.9 才算解对，0.95 以上很稳（实测工程里多为 0.98–0.9995）。

@@ -57,7 +57,7 @@
 任何跨「成片 / 原曲 / LRC / 外部标尺」的比数，先跑：
 
 ```bash
-python scripts/solve_audio_offset.py --video 成片.mp4 --audio 原曲.m4a
+python scripts/solve_audio_offset.py 原曲.m4a 成片.mp4
 ```
 
 - 输出 `成片 0s = 原曲第几秒` 与相关系数；**r > 0.9 才认**。

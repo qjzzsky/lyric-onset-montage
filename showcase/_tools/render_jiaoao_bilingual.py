@@ -83,9 +83,9 @@ def main():
     # ---------- 标题 ----------
     text((96, 22), "字头对齐 vs 鼓点对齐", 30, WHITE, True)
     text((96, 62), "Lyric onsets vs. the beat grid", 19, GREY)
-    text((96, 98), "前半首 20 句实测：中位量级 0.15–0.30s（单句最大约 0.35s，约半拍 0.357s）；相位法不确定 R=0.04", 15, GREY)
+    text((96, 98), "前半首 20 句实测：中位 0.22s、四分位 0.19–0.32s（单句最大约 0.35s，约半拍 0.357s）；相位法不确定 R=0.04", 15, GREY)
     text((96, 118), "First 20 lines: median gap 0.15–0.30 s (worst line ≈0.35 s ≈ half a beat); phase fit inconclusive, R=0.04", 12, DIM)
-    text((96, 142), "音源《骄傲的少年》· NZBZ ｜ 窗口 78–90s ｜ 曲速 84.0 BPM（八拍已校正）｜ 半拍 0.357s ｜ 观测点：能量上升沿（比嘴唇字头晚 0.1–0.3s）", 14, GREY)
+    text((96, 142), "音源《骄傲的少年》· NZBZ ｜ 窗口 78–90s ｜ 曲速 84.0 BPM（网格相位已校正）｜ 半拍 0.357s ｜ 观测点：能量上升沿（比嘴唇字头晚 0.1–0.3s）", 14, GREY)
     text((96, 162), "Source 《骄傲的少年》· NZBZ | window 78–90 s | tempo 84.0 BPM (8-beat, corrected) | half beat 0.357 s | onsets read at the energy rise (0.1–0.3 s after the lips)", 12, DIM)
 
     # ---------- 两条轨 ----------
@@ -161,8 +161,8 @@ def main():
     text((96, 974), "中文歌的弱起句常抢在半拍前，按网格切就是 200–300ms 级误差。", 13, GREY)
     text((96, 993), "Chinese pop lines often start ahead of the half-beat; cutting on the grid costs 200–300 ms.", 12, DIM)
 
-    text((96, 1014), "生成：deepseek-flash ｜ 运行环境：DeepSeek Harness (DSH) ｜ 2026-10-20", 11, DIM)
-    text((560, 1014), "made with deepseek-flash on DeepSeek Harness (DSH)", 11, DIM)
+    text((96, 1014), "生成：DeepSeek Harness (DSH) ｜ 模型：DeepSeek V4.1", 11, DIM)
+    text((560, 1014), "made with DeepSeek V4.1 on DeepSeek Harness (DSH)", 11, DIM)
 
     im.save(out)
     print("saved", out, im.size)

@@ -4,15 +4,15 @@
 """
 import os, subprocess, sys
 
-FF = "ffmpeg"
-FP = "ffprobe"
-BASE = "D:/hermes-work/剪辑"
-SRC = "E:/源素材目录"
-STAGE = BASE + "/src"
-CUTS = BASE + "/cuts"
-MUSIC = "E:/项目/歌曲.mp3"
-OUT = "E:/项目/成片.mp4"
-LOG = BASE + "/build.log"
+FF = os.environ.get("FFMPEG", "ffmpeg")
+FP = os.environ.get("FFPROBE", "ffprobe")
+BASE = os.environ.get("WORK", "work")          # 项目工作区（切片、日志都放这）
+SRC = os.environ.get("SRC", "source")          # 源素材目录
+STAGE = os.path.join(BASE, "src")
+CUTS = os.path.join(BASE, "cuts")
+MUSIC = os.environ.get("MUSIC", "song.mp3")
+OUT = os.environ.get("OUT", "out.mp4")
+LOG = os.path.join(BASE, "build.log")
 TOTAL = 98.0          # 成片总长（= 最后一个字头到结尾）
 
 # (源文件, 入点秒, 时长秒, 说明)  —— 每半句一镜

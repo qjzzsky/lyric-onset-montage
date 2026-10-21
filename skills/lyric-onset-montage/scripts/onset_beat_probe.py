@@ -9,8 +9,8 @@
 
 口径：
   onset_diff_ms = (切点 - 实测字头) * 1000          # 刀准不准
-  beat_diff_ms  = (最近拍点 - 实测字头) * 1000      # 若改用拍切会差多少
-  stats 用「字头 vs 最近拍点」算，和主指标分开报。
+  beat_diff_ms  = (切点 - 最近拍点) * 1000          # 这一刀离拍点有多远
+  stats 里的 B 用「字头 vs 最近拍点」算，和主指标分开报。
 """
 import argparse
 import json

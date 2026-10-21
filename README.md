@@ -34,7 +34,7 @@ Concretely, in the example above, the handrail that appears in the second frame 
 
 Top track: the beat grid. Bottom track: measured onsets. The red lines are where the cuts actually are.
 
-In this 115-second edit the beat grid and the sung word disagree by **160–369 ms** — about half a beat — so cutting to the beat is audibly wrong, and cutting to a subtitle timestamp is wrong by a smaller but still audible margin.
+In this 115-second edit the beat grid and the sung word disagree by **222 ms at the median, 346 ms at worst** (n = 20) — about half a beat — so cutting to the beat is audibly wrong, and cutting to a subtitle timestamp is wrong by a smaller but still audible margin.
 
 > **How to read the numbers:** `A` = cut − measured onset (is this cut right). `B` = nearest beat − measured onset (what cutting to the beat would cost). `B` is the independent comparison; `A` is measured with the same family of detectors that placed the cut, so a small `A` proves consistency, not correctness. **The independent check is your ear** — every case below was accepted or corrected by a human listening, and those corrections are logged.
 
@@ -44,7 +44,7 @@ How each of the three evidence figures is read and made: [`showcase/证据图例
 
 ## Three things this does that a beat-synced editor does not
 
-1. **Cuts land on the sung onset, measured from the audio.** Subtitle and LRC timestamps are used only to narrow the search window: they typically start **0.1–0.24 s before** the voice. A cut placed on the subtitle is a cut that arrives early.
+1. **Cuts land on the sung onset, measured from the audio.** Subtitle and LRC timestamps are used only to narrow the search window: they typically start **0.1–0.27 s before** the voice. A cut placed on the subtitle is a cut that arrives early.
 
 2. **Timing and shot selection are judged separately.** A montage can be frame-accurate and still be full of empty shots; it can also have perfect shots and be 200 ms early on every line. Two metrics, two checks, never averaged into one score.
 
@@ -131,8 +131,8 @@ Full detail, including what failure looks like at each step, in [`references/wor
 
 | Stage | Steps | What it produces | Typical failure |
 | --- | --- | --- | --- |
-| **A. Scope** | 1–5 brief · range and end point · audio · footage survey · environment check | Range, 48 kHz audio, `footage.md` | Surveying at "one frame every 10 s" and writing windows from it |
-| **B. Timeline** | 6–12 lyric sources · line boundaries · onsets · auxiliary checks · time base · onset table · cross-check | `onsets.csv` with a confidence column | Trusting subtitle timestamps as onsets |
+| **A. Scope** | 1–5 brief · range and end point · audio · footage survey · environment check | Range, 48 kHz audio, `素材清单.md` | Surveying at "one frame every 10 s" and writing windows from it |
+| **B. Timeline** | 6–12 lyric sources · line boundaries · onsets · auxiliary checks · time base · onset table · cross-check | `字头表.csv` with a confidence column | Trusting subtitle timestamps as onsets |
 | **C. Selection** | 13–17 candidates · frame checks · context check · preview · approval | 3–4 first choices + 3–6 alternates per line | Cutting with one option per line, so one bad choice re-renders everything |
 | **D. Assembly** | 18–22 shot table · per-cut arithmetic · cuts · concat + mux · self-check | Seamless timeline, single audio track | `-c copy` dropping frames, `-shortest` clipping the tail |
 | **E. Delivery** | 23–27 deliver · collect notes · minimal edits · change log · write back to the index | Final video, contact sheet, shot table, self-check | Rebuilding the whole edit for one cut |
@@ -169,7 +169,7 @@ License: [MIT](LICENSE). Built with FFmpeg, faster-whisper, numpy, scipy and mat
 
 ### About the author
 
-**qjzzsky · 曲靖中中**
+**qjzzsky**
 
 - GitHub: [qjzzsky](https://github.com/qjzzsky)
 - Website: [qjzzsky.com](https://qjzzsky.com)

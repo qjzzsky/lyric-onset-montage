@@ -15,7 +15,7 @@
 
 输出：每段「序号 / 起秒 / 止秒 / 时长」，以及疑似「同类无字帧」提示。
 注意：相邻两行只差一个字时像素量几乎不变，本脚本检不出换行，
-     必须再按 1 秒抽帧用眼睛确认（见 references/lyric-timing.md 第二节）。
+     必须再按 1 秒抽帧用眼睛确认（见 references/lyric-timing.md 第一节）。
 """
 import argparse
 import os
