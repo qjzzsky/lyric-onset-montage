@@ -60,10 +60,12 @@ Each case is the skill at a different stage — what it could do, and what it st
 | - | --- | --- | --- | --- |
 | ① | [`意外-20261018`](showcase/意外-20261018/) | Hermes Agent · Xiaomi MiMo V2.6 | No lyric source: cut per line first, then re-cut on the onset | **Where it started.** Moving from "cut per sentence" to "cut on the word"; the beat grid was off by 160–369 ms |
 | ② | [`骄傲的少年-115s`](showcase/骄傲的少年-115s/) | DeepSeek Harness · DeepSeek V4.1 | Album LRC ↔ audio cross-correlation to solve the offset (**+1.83 s**), 20 lines re-checked at a **0.10 s** median | **Time base solved**, and the A/B split became two separate metrics |
-| ③ | [`推开世界的门-55s`](showcase/推开世界的门-55s/) | Hermes Agent · DeepSeek V4.1 | 55-second chorus slice, 16 cuts, then **five rounds / 9 edits** after delivery | **Revision as a first-class step.** The only case with a full "delivered, then changed" log — including the round where the wrong cuts were edited because of an off-by-one in the figure labels |
+| ③ | [`推开世界的门-55s`](showcase/推开世界的门-55s/) | Hermes Agent · DeepSeek V4.1 | 55-second chorus slice, 16 cuts, then **six rounds / 9 real edits** after delivery | **Revision as a first-class step.** The only case with a full "delivered, then changed" log — including the round where the wrong cuts were edited because of an off-by-one in the figure labels |
 | ④ | [`快乐小神仙-176s`](showcase/快乐小神仙-176s/) | Hermes Agent · DeepSeek V4.1 | No subtitle track: 37 lyric segments detected from burned-in subtitles | **The hard case.** 47 cuts, 176.00 s, zero revisions — and the case where the metrics were openly called out as self-referential |
 
 Specs, per-cut tables and self-checks live inside each folder.
+
+Track credits: 《意外》 — 薛之谦 (words and music 杨子朴) ｜ 《骄傲的少年》 — 南征北战NZBZ (words 赵辰龙, music 汀洋) ｜ 《推开世界的门》 — 杨乃文 (words and music 火星电台 / 黄少峰) ｜ 《快乐小神仙》 — 天唱组合 (words 张藜, music 肖白). All rights stay with their owners; these four cases are technical write-ups only.
 
 ---
 

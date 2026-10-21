@@ -16,6 +16,22 @@ This skill calls other tools rather than bundling them. Each keeps its own licen
 figure scripts under `showcase/_tools/` (`render_cutproof.py`, `render_jiaoao_bilingual.py`,
 `render_sequence.py`, `render_legend.py`) are original to this repository (MIT).
 
+## Music used in the case studies
+
+Each case is a technical write-up of an edit made to the author's own footage. The songs are
+third-party works, credited here, and are **not** redistributed in any form:
+
+| Case | Song | Performer | Words / music |
+|---|---|---|---|
+| ① | 《意外》 | 薛之谦 | words and music 杨子朴 |
+| ② | 《骄傲的少年》 | 南征北战NZBZ | words 赵辰龙 / music 汀洋 |
+| ③ | 《推开世界的门》 | 杨乃文 | words and music 火星电台 / 黄少峰 |
+| ④ | 《快乐小神仙》 | 天唱组合 | words 张藜 / music 肖白 |
+
+All rights in the songs, the performances and the recordings stay with their owners. Only
+still frames, waveform plots, lyrics fragments needed to show alignment, and timing tables
+appear in this repository.
+
 ## About the case studies
 
 The four folders under `showcase/` are records of real edits. The **footage is the author's
