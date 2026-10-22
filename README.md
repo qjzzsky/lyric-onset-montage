@@ -1,5 +1,7 @@
 # Lyric-Onset Montage
 
+[中文简体](./README.zh-CN.md)
+
 **Cut footage to the sung word — not to the beat, and not to the subtitle.**
 
 A skill for AI agents that turns a song plus a folder of raw footage into a montage whose every cut lands on the first consonant of a lyric line. It measures the onset from the audio, keeps shot selection and timing as two separate decisions, and hands back evidence you can check instead of adjectives you have to trust.
