@@ -1,6 +1,10 @@
 # local working files (drafts, private notes) — never published
 _local/
 
+# 版本归档（本地快照，不进仓库）
+/1.0.0/
+/1.0.1/
+
 # python
 __pycache__/
 *.py[cod]
