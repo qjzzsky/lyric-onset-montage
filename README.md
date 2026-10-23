@@ -149,13 +149,13 @@ That is the whole brief. Everything else — surveying the footage, picking lyri
 
 Full detail, including what failure looks like at each step, in [`references/workflow.md`](skills/lyric-onset-montage/references/workflow.md).
 
-| Stage | Steps | What it produces | Typical failure |
-| --- | --- | --- | --- |
-| **A. Scope** | 1–5 brief · range and end point · audio · footage survey · environment check | Range, 48 kHz audio, `素材清单.md` | Surveying at "one frame every 10 s" and writing windows from it |
-| **B. Timeline** | 6–12 lyric sources · line boundaries · onsets · auxiliary checks · time base · onset table · cross-check | `字头表.csv` with a confidence column | Trusting subtitle timestamps as onsets |
-| **C. Selection** | 13–17 candidates · frame checks · context check · preview · approval | 3–4 first choices + 3–6 alternates per line | Cutting with one option per line, so one bad choice re-renders everything |
-| **D. Assembly** | 18–22 shot table · per-cut arithmetic · cuts · concat + mux · self-check | Seamless timeline, single audio track | `-c copy` dropping frames, `-shortest` clipping the tail |
-| **E. Delivery** | 23–27 deliver · collect notes · minimal edits · change log · write back to the index | Final video, contact sheet, shot table, self-check, browser change board (`改动台.html`) | Rebuilding the whole edit for one cut |
+| Stage | Steps | What it produces |
+| --- | --- | --- |
+| **A. Scope** | 1–5 brief · range and end point · audio · footage survey · environment check | Range, 48 kHz audio, `素材清单.md` |
+| **B. Timeline** | 6–12 lyric sources · line boundaries · onsets · auxiliary checks · time base · onset table · cross-check | `字头表.csv` with a confidence column |
+| **C. Selection** | 13–17 candidates · frame checks · context check · preview · approval | 3–4 first choices + 3–6 alternates per line |
+| **D. Assembly** | 18–22 shot table · per-cut arithmetic · cuts · concat + mux · self-check | Seamless timeline, single audio track |
+| **E. Delivery** | 23–27 deliver · collect notes · minimal edits · change log · write back to the index | Final video, contact sheet, shot table, self-check, browser change board (`改动台.html`) |
 
 Stage E ships one more thing: a **change board** built from the shot table, which plays the edit cut by cut so you can point at a frame instead of counting seconds — see [Refine it in the browser](#refine-it-in-the-browser).
 
@@ -197,7 +197,6 @@ The prompt it copies is the same "which cut, what is wrong" brief the skill acce
 
 - **It does not download music or video.** You supply the files. The skill has no search, no scraper, no bypass of any platform.
 - **It cannot hear the way you do.** For legato lines with no breath before the first word, the detector returns a candidate — the cut is marked `⚠ unconfirmed` and left for your ear. The skill says so instead of pretending.
-- **It does not decide who may appear on camera.** If a face, a plate or a sign might be a problem, it asks and offers an alternative shot; it does not blur the problem and call it solved.
 - **It does not replace your taste.** Selection is ranked and previewed, then approved by you.
 - **A is not an independent measurement.** See the note under the first image.
 
