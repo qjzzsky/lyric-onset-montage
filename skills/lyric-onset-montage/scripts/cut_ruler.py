@@ -12,7 +12,7 @@
   python cut_ruler.py --video 成片.mp4 --cuts 0.20,6.18,13.30 --out ruler.jpg
 
 依赖 numpy scipy matplotlib，装进工程 venv（uv venv → uv pip install ...），别装系统 python。
-ffmpeg 默认取 PATH，不在 PATH 里就用 --ffmpeg "C:/ffmpeg/bin/ffmpeg.exe" 指明。
+ffmpeg 默认取 PATH，不在 PATH 里就用 --ffmpeg /路径/ffmpeg 指明。
 """
 import argparse
 import os
