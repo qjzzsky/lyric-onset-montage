@@ -198,8 +198,9 @@ def first_frames(video, cuts, out, cols=6, fps=30):
     import matplotlib.pyplot as plt
     try:
         from matplotlib import font_manager
-        if os.path.exists("C:/Windows/Fonts/msyh.ttc"):
-            font_manager.fontManager.addfont("C:/Windows/Fonts/msyh.ttc")
+        _f = os.path.join(os.environ.get("WINDIR", ""), "Fonts", "msyh.ttc")
+        if os.path.exists(_f):
+            font_manager.fontManager.addfont(_f)
         plt.rcParams["font.sans-serif"] = ["Microsoft YaHei"]
     except Exception:
         pass
@@ -225,7 +226,7 @@ def first_frames(video, cuts, out, cols=6, fps=30):
         ax.axis("off")
         if k < len(cuts) and paths[k]:
             ax.imshow(plt.imread(paths[k]))
-            ax.set_title(f"#{k + 1:02d}  {cuts[k]:.2f}s", fontsize=9)
+            ax.set_title(f"#{k + 1:02d}", fontsize=11)
     fig.tight_layout()
     fig.savefig(out, dpi=100)
     plt.close(fig)
