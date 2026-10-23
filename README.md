@@ -154,7 +154,9 @@ Full detail, including what failure looks like at each step, in [`references/wor
 | **B. Timeline** | 6–12 lyric sources · line boundaries · onsets · auxiliary checks · time base · onset table · cross-check | `字头表.csv` with a confidence column | Trusting subtitle timestamps as onsets |
 | **C. Selection** | 13–17 candidates · frame checks · context check · preview · approval | 3–4 first choices + 3–6 alternates per line | Cutting with one option per line, so one bad choice re-renders everything |
 | **D. Assembly** | 18–22 shot table · per-cut arithmetic · cuts · concat + mux · self-check | Seamless timeline, single audio track | `-c copy` dropping frames, `-shortest` clipping the tail |
-| **E. Delivery** | 23–27 deliver · collect notes · minimal edits · change log · write back to the index | Final video, contact sheet, shot table, self-check | Rebuilding the whole edit for one cut |
+| **E. Delivery** | 23–27 deliver · collect notes · minimal edits · change log · write back to the index | Final video, contact sheet, shot table, self-check, browser change board (`改动台.html`) | Rebuilding the whole edit for one cut |
+
+Stage E ships one more thing: a **change board** built from the shot table, which plays the edit cut by cut so you can point at a frame instead of counting seconds — see [Refine it in the browser](#refine-it-in-the-browser).
 
 ---
 
@@ -169,6 +171,24 @@ Shot <n>: I can't see it before it's gone, keep one of the two.
 ```
 
 Three phrasings cover almost every revision: swap the footage, move the cut, or pick one moment inside a single clip. Only the named cuts are re-cut; the other cut files are reused, and the delivery includes proof that nothing else moved.
+
+---
+
+## Refine it in the browser
+
+![Bilingual change board: Chinese UI on the left, English UI on the right, the same cut #9 selected in both](showcase/推开世界的门-55s-v2/改动台-双语对照.png)
+
+`templates/build_changeboard.py` reads the shot table and writes `改动台.html` into the same folder as the final video. One file, no server, no network, no access to the footage library.
+
+- **Click a shot.** Playback starts 3 seconds before its cut, so you see what leads into it.
+- **Four states per cut.** No change (default) / timing off / swap the footage / something else. Only that cut is marked.
+- **"Timing off" loop.** It repeats the three seconds either side of the cut; hit "adjust here" where it should land and that time goes straight into the prompt. Say "a bit early" once or twice — if the number is still off, stop guessing and point at the frame.
+- **Auto-follow.** The list and the panel follow playback like a lyric sheet, so a note cannot land on the wrong cut.
+- **Keyboard.** ← → skip 2 seconds, space pauses — everywhere except while typing.
+- **Two languages.** The `中 / EN` switch flips every label and the wording of the prompt; `--lang en` opens it in English.
+- **Two copy buttons.** Green when nothing changed (confirm and render), blue when something did (copy the change list).
+
+The prompt it copies is the same "which cut, what is wrong" brief the skill accepts by voice — the page only removes the guessing. Worked example: [`showcase/推开世界的门-55s-v2/`](showcase/推开世界的门-55s-v2/) — seven cuts picked by ear on this page, every one verified to a frame.
 
 ---
 
