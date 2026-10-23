@@ -4,9 +4,9 @@
 
 **Cut footage to the sung word — not to the beat, and not to the subtitle.**
 
-A skill for AI agents that turns a song plus a folder of raw footage into a montage whose every cut lands on the first consonant of a lyric line. It measures the onset from the audio, keeps shot selection and timing as two separate decisions, and hands back evidence you can check instead of adjectives you have to trust.
+A skill for AI agents that turns a song plus a folder of raw footage into a montage whose every cut lands on the measured onset of a sung word. It measures the onset from the audio, keeps shot selection and timing as two separate decisions, and hands back evidence you can check instead of adjectives you have to trust.
 
-## Install
+## Quick start
 
 ```bash
 npx skills add qjzzsky/lyric-onset-montage
@@ -177,7 +177,7 @@ Three phrasings cover almost every revision: swap the footage, move the cut, or 
 
 ## Refine it in the browser
 
-![Bilingual change board: Chinese UI on the left, English UI on the right, the same cut #9 selected in both](showcase/推开世界的门-55s-v2/改动台-双语对照.png)
+![Bilingual change board: Chinese UI on the left, English UI on the right, the same cut selected in both](showcase/推开世界的门-55s-v2/改动台-双语对照.png)
 
 `templates/build_changeboard.py` reads the shot table and writes `改动台.html` into the same folder as the final video. One file, no server, no network, no access to the footage library.
 

@@ -99,7 +99,7 @@ def detect_video(out_dir: Path, explicit, folder_name: str) -> str:
 
 
 HTML = r"""<!doctype html>
-<html lang="zh-CN">
+<html lang="__LANG__">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">

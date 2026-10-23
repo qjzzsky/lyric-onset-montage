@@ -12,10 +12,10 @@ import argparse
 import subprocess
 import sys
 
-import numpy as np
-
 
 def probe(ffmpeg, video, t, fps, win):
+    import numpy as np   # 延后导入：--help 不需要 numpy
+
     n = 2 * win + 1
     raw = subprocess.run(
         [ffmpeg, "-v", "error", "-ss", f"{t - win / fps:.4f}", "-i", video,
@@ -32,6 +32,11 @@ def probe(ffmpeg, video, t, fps, win):
 
 
 def main():
+    try:
+        import numpy  # noqa: F401
+    except ImportError:
+        sys.exit("缺 numpy：pip install numpy（或 uv run --with numpy python cut_switch_probe.py ...）")
+
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--video", required=True)

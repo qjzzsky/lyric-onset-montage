@@ -13,7 +13,7 @@ WAVE="#8fc3e8"; GRIDC="#4e5763"; RED="#f2403a"; FOOT="#5f6873"
 X0,X1 = 48,1552
 
 def F(sz,bold=False):
-    cands = [r"C:\Windows\Fonts\msyhbd.ttc" if bold else r"C:\Windows\Fonts\msyh.ttc",
+    cands = [os.path.join(os.environ.get("WINDIR", ""), "Fonts", "msyhbd.ttc" if bold else "msyh.ttc"),
              "/System/Library/Fonts/PingFang.ttc",
              "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
     for f in cands:

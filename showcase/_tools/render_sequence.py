@@ -27,7 +27,7 @@ FRAMES = [
 
 
 def font(size, bold=False):
-    for p in (r"C:\Windows\Fonts\msyhbd.ttc" if bold else r"C:\Windows\Fonts\msyh.ttc",
+    for p in (os.path.join(os.environ.get("WINDIR", ""), "Fonts", "msyhbd.ttc" if bold else "msyh.ttc"),
               "/System/Library/Fonts/PingFang.ttc",
               "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else
               "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"):
