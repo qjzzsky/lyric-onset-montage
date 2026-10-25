@@ -32,11 +32,6 @@ def probe(ffmpeg, video, t, fps, win):
 
 
 def main():
-    try:
-        import numpy  # noqa: F401
-    except ImportError:
-        sys.exit("缺 numpy：pip install numpy（或 uv run --with numpy python cut_switch_probe.py ...）")
-
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--video", required=True)
@@ -46,6 +41,11 @@ def main():
     ap.add_argument("--win", type=int, default=5, help="切点前后各取几帧")
     ap.add_argument("--ffmpeg", default="ffmpeg")
     a = ap.parse_args()
+
+    try:
+        import numpy  # noqa: F401   # 放在解析参数之后：--help / --version 不需要 numpy
+    except ImportError:
+        sys.exit("缺 numpy：pip install numpy（或 uv run --with numpy python cut_switch_probe.py ...）")
 
     print("刀号  规格切点  实测换镜帧  实测秒  差(s)")
     for i, tok in enumerate(a.cuts.split(","), 1):
