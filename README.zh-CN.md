@@ -215,7 +215,14 @@ E 段还多给一件东西：按镜头表生成的**改动台**，能在浏览�
 
 由 [Hermes Agent](https://github.com/NousResearch/hermes-agent) 与 DeepSeek Harness 承载，小米 MiMo V2.6 系列与 DeepSeek V4.1 参与制作。技能、脚本、案例由作者和它们一起完成、测试、发布。
 
-English: [README.md](README.md)
+### 致谢
+
+两位课堂搭子读过早期版本，提了改进建议：
+
+- **凯杰 / Ethan** —— 课堂搭子，提了不少改进建议。
+- **飞叔 / Yoda** —— 课堂搭子，提了不少改进建议，个人主页：[github.com/uranusyoda](https://github.com/uranusyoda)。
+
+English: [README.md](./README.md)
 
 ---
 

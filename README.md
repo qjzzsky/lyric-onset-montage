@@ -217,7 +217,14 @@ License: [MIT](LICENSE). Built with FFmpeg, faster-whisper, numpy, scipy and mat
 
 Built with [Hermes Agent](https://github.com/NousResearch/hermes-agent) and DeepSeek Harness — carried by Xiaomi MiMo V2.6 and DeepSeek V4.1. Skills, scripts and case studies authored, tested and published with their help.
 
-中文版：[README.zh-CN.md](README.zh-CN.md)
+### Thanks
+
+Two classmates from the same course read early drafts and suggested improvements:
+
+- **Ethan** — course mate; contributed a number of suggestions.
+- **Yoda** — course mate; contributed a number of suggestions. [github.com/uranusyoda](https://github.com/uranusyoda)
+
+Chinese version: [README.zh-CN.md](./README.zh-CN.md)
 
 ---
 
