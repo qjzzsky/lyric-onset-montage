@@ -217,10 +217,10 @@ E 段还多给一件东西：按镜头表生成的**改动台**，能在浏览�
 
 ### 致谢
 
-两位课堂搭子读过早期版本，提了改进建议：
+两位课堂搭子读过早期版本，对 2.0 版本的新特性与更新方向给出了宝贵指导意见：
 
-- **凯杰 / Ethan** —— 课堂搭子，提了不少改进建议。
-- **飞叔 / Yoda** —— 课堂搭子，提了不少改进建议，个人主页：[github.com/uranusyoda](https://github.com/uranusyoda)。
+- **凯杰 / Ethan** —— 课堂搭子
+- **飞叔 / Yoda** —— 课堂搭子，个人主页：[github.com/uranusyoda](https://github.com/uranusyoda)
 
 English: [README.md](./README.md)
 

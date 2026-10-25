@@ -219,10 +219,10 @@ Built with [Hermes Agent](https://github.com/NousResearch/hermes-agent) and Deep
 
 ### Thanks
 
-Two classmates from the same course read early drafts and suggested improvements:
+Two classmates from the same course read early drafts and gave valuable guidance on the new features and direction of version 2.0:
 
-- **Ethan** — course mate; contributed a number of suggestions.
-- **Yoda** — course mate; contributed a number of suggestions. [github.com/uranusyoda](https://github.com/uranusyoda)
+- **Ethan** — course mate
+- **Yoda** — course mate. [github.com/uranusyoda](https://github.com/uranusyoda)
 
 Chinese version: [README.zh-CN.md](./README.zh-CN.md)
 
