@@ -1,7 +1,7 @@
 ---
 name: lyric-onset-montage
 description: "Use when cutting a lyric-synced montage: 歌词混剪、贴字头、按歌剪素材、切点对齐歌词。Cuts land on the measured sung onset — never on the beat grid or on subtitle timestamps — and the delivery carries checkable evidence."
-version: 2.0.0
+version: 2.0.1
 author: Hermes Agent
 license: MIT
 platforms: [windows, linux, macos]
